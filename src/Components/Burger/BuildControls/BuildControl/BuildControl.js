@@ -1,12 +1,12 @@
 import React from 'react';
-// import burger from '../../Burger';
 import './BuildControl.css';
 
 const buildControl = (props) => (
     <div>
+        {console.log("BuildController 1")}
         <div className = 'BuildControl'>{props.label}
-        <button className = 'Less'>Less</button>
-        <button className = 'More'>More</button>
+        <button className = 'Less' onClick = {props.deleted}>Less</button>
+        <button className = 'More' onClick = {props.added}>More</button>
         </div>
     </div>
 );

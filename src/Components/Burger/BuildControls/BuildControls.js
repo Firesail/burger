@@ -9,12 +9,27 @@ const controls = [
     {label: 'Meat', type: 'meat'},
 ];
 
+const check = () => {
+    return(
+        <div>
+            Checking
+        </div>
+    )
+}
+
 const buildControls = (props) => (
 
     <div className = 'BuildControls'>
+        {console.log("BuildControllers")}
         {controls.map(ctrl => {
-            return  <BuildControl key = {ctrl.label} label = {ctrl.label}/>
+            return  <BuildControl 
+            key = {ctrl.label} 
+            label = {ctrl.label} 
+            added = {() => props.added(ctrl.type)}
+            deleted = {() => props.deleted(ctrl.type)}
+            />
         })}
+        {check}
     </div>
 );
 
