@@ -13,6 +13,8 @@ class BurgerBuilder extends Component {
         }
     }
 
+    // Cool Burger
+
     render(){
         return(
             <Auxy>
